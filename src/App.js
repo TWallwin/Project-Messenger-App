@@ -3,7 +3,19 @@ import "./index.css";
 import { useState } from "react";
 import ThemeContext from "./contexts/Theme";
 import Message from "./components/Message";
+
+// const express = require("express");
+
+// const { Server } = require("socket.io");
+
+// const http = require("http");
+
+// const app = express();
+// const server = http.createServer(app);
+// const io = new Server(server);
+
 import ToggleTheme from "./components/ToggleTheme";
+
 
 function App() {
   const [theme, setTheme] = useState("light");

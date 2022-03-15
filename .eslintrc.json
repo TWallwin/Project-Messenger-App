@@ -13,7 +13,23 @@
   },
   "plugins": ["react"],
   "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "quotes": ["error", "double"],
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "prefer-destructuring": [
+      "error",
+      {
+        "VariableDeclarator": {
+          "array": false,
+          "object": false
+        },
+        "AssignmentExpression": {
+          "array": false,
+          "object": false
+        }
+      },
+      {
+        "enforceForRenamedProperties": false
+      }
+    ]
   }
 }
