@@ -1,21 +1,15 @@
-import "./index.css";
-import Message from "./components/Message";
-
-const express = require("express");
-const app = express();
-const http = require("http");
-const server = http.createServer(app);
-const { Server } = require("socket.io");
-const io = new Server(server);
+import './index.css';
+import React from 'react';
+import Message from './components/Message';
+import Header from './components/Header';
 
 function App() {
   return (
-    <div className='App'>
+    <div className="App">
+      <Header />
       <Message />
     </div>
   );
 }
-
-//Testing github
 
 export default App;
