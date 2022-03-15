@@ -1,4 +1,7 @@
+/* eslint-disable react/jsx-no-constructed-context-values */
 import "./index.css";
+import { useState } from "react";
+import ThemeContext from "./contexts/Theme";
 import Message from "./components/Message";
 
 // const express = require("express");
@@ -11,11 +14,18 @@ import Message from "./components/Message";
 // const server = http.createServer(app);
 // const io = new Server(server);
 
+import ToggleTheme from "./components/ToggleTheme";
+
+
 function App() {
+  const [theme, setTheme] = useState("light");
   return (
-    <div className="App">
-      <Message />
-    </div>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      <div className={`App__${theme}`}>
+        <ToggleTheme />
+        <Message />
+      </div>
+    </ThemeContext.Provider>
   );
 }
 
