@@ -22,6 +22,16 @@
           "array": false,
           "object": false
         },
+
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+
         "AssignmentExpression": {
           "array": false,
           "object": false
@@ -32,4 +42,7 @@
       }
     ]
   }
+
 }
+    }
+
