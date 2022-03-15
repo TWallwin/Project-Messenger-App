@@ -10,7 +10,7 @@ const io = new Server(server);
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <Message />
     </div>
   );
